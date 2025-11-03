@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Reloj from "./reloj";
 import Link from "next/link";
 import AutoCarousel from "@/components/AutoCarousel";
+import MyDatePicker from "@/components/MyDatePicker";
 import CountDown from "@/components/CountDown";
 import Table from "@/components/Table";
 import SortedTable from "@/components/SortedTable";
@@ -11,6 +12,7 @@ import RadialProgress from "@/components/RadialProgress";
 
 export default function Home() {
   const [hora, setHora] = useState(new Date());
+  const fecha = new Date();
 
     useEffect(() => {
         const i1 = setInterval(() => {
@@ -30,24 +32,19 @@ export default function Home() {
         </div>
         
       <br />
-      <div className="tooltip" data-tip="hello world">
-        <p className="btn">Hover me</p>
-      </div>
 
 
       {/* name of each tab group should be unique */}
       <div className="tabs tabs-box">
-        <input type="radio" name="my_tabs" className="tab" aria-label="Tab 1" />
+        <input type="radio" name="my_tabs" className="tab" aria-label="Calendario" />
         <div className="tab-content bg-base-100 border-base-300 p-6">
-          <p>Tab content 1</p>
-
-          <details className="dropdown">
-            <summary className="btn m-1">open or close</summary>
-            <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-              <li><a>Item 1</a></li>
-              <li><a>Item 2</a></li>
-            </ul>
-          </details>
+          <p>{fecha.toISOString()}</p>
+                      <MyDatePicker />
+                      <input type="date"
+                          defaultValue="2025-02-14"
+                          min="2025-01-01"
+                          max="2025-12-31" />
+                      <input type="datetime-local" />
         </div>
 
         <input type="radio" name="my_tabs" className="tab" aria-label="Tab 2" />
