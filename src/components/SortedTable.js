@@ -7,185 +7,74 @@ function SortedTable() {
     const data = [
         {
             id: 1,
-            name: "Cy Ganderton",
-            job: "Quality Control Specialist",
-            company: "Littel, Schaden and Vandervort",
-            location: "Canada",
-            lastLogin: "12/16/2020",
-            color: "Blue"
+            name: "Rosa",
+            significance: "Amor, pasión y belleza",
+            bestPairedWith: "Nube (baby’s breath), lirios, peonías",
+            nativeRegion: "Asia, Europa, América del Norte"
         },
         {
             id: 2,
-            name: "Hart Hagerty",
-            job: "Desktop Support Technician",
-            company: "Zemlak, Daniel and Leannon",
-            location: "United States",
-            lastLogin: "12/5/2020",
-            color: "Purple"
+            name: "Tulipán",
+            significance: "Amor perfecto y renacimiento",
+            bestPairedWith: "Narcisos, jacintos, lirios",
+            nativeRegion: "Asia Central, Turquía, Países Bajos"
         },
         {
             id: 3,
-            name: "Brice Swyre",
-            job: "Tax Accountant",
-            company: "Carroll Group",
-            location: "China",
-            lastLogin: "8/15/2020",
-            color: "Red"
+            name: "Lavanda",
+            significance: "Calma, gracia y pureza",
+            bestPairedWith: "Rosas, margaritas, eucalipto",
+            nativeRegion: "Región del Mediterráneo"
         },
         {
             id: 4,
-            name: "Marjy Ferencz",
-            job: "Office Assistant I",
-            company: "Rowe-Schoen",
-            location: "Russia",
-            lastLogin: "3/25/2021",
-            color: "Crimson"
+            name: "Girasol",
+            significance: "Adoración, lealtad y felicidad",
+            bestPairedWith: "Margaritas, zinnias, ásteres",
+            nativeRegion: "América del Norte y Central"
         },
         {
             id: 5,
-            name: "Yancy Tear",
-            job: "Community Outreach Specialist",
-            company: "Wyman-Ledner",
-            location: "Brazil",
-            lastLogin: "5/22/2020",
-            color: "Indigo"
+            name: "Orquídea",
+            significance: "Lujo, fortaleza y belleza",
+            bestPairedWith: "Helechos, anturios, lirios",
+            nativeRegion: "Asia tropical, América Central y del Sur"
         },
         {
             id: 6,
-            name: "Irma Vasilik",
-            job: "Editor",
-            company: "Wiza, Bins and Emard",
-            location: "Venezuela",
-            lastLogin: "12/8/2020",
-            color: "Purple"
+            name: "Cerezo en flor",
+            significance: "Transitoriedad de la vida y renovación",
+            bestPairedWith: "Camelias, azaleas, magnolias",
+            nativeRegion: "Japón, China, Corea"
         },
         {
             id: 7,
-            name: "Meghann Durtnal",
-            job: "Staff Accountant IV",
-            company: "Schuster-Schimmel",
-            location: "Philippines",
-            lastLogin: "2/17/2021",
-            color: "Yellow"
+            name: "Margarita",
+            significance: "Inocencia, pureza y nuevos comienzos",
+            bestPairedWith: "Lavanda, rosas, girasoles",
+            nativeRegion: "Europa, América del Norte"
         },
         {
             id: 8,
-            name: "Sammy Seston",
-            job: "Accountant I",
-            company: "O'Hara, Welch and Keebler",
-            location: "Indonesia",
-            lastLogin: "5/23/2020",
-            color: "Crimson"
+            name: "Lirio",
+            significance: "Pureza, devoción y renacimiento",
+            bestPairedWith: "Rosas, tulipanes, hortensias",
+            nativeRegion: "Europa, Asia, América del Norte"
         },
         {
             id: 9,
-            name: "Lesya Tinham",
-            job: "Safety Technician IV",
-            company: "Turner-Kuhlman",
-            location: "Philippines",
-            lastLogin: "2/21/2021",
-            color: "Maroon"
+            name: "Hortensia",
+            significance: "Gratitud, gracia y abundancia",
+            bestPairedWith: "Rosas, peonías, eucalipto",
+            nativeRegion: "Japón, China, Corea"
         },
         {
             id: 10,
-            name: "Zaneta Tewkesbury",
-            job: "VP Marketing",
-            company: "Sauer LLC",
-            location: "Chad",
-            lastLogin: "6/23/2020",
-            color: "Green"
-        },
-        {
-            id: 11,
-            name: "Andy Tipple",
-            job: "Librarian",
-            company: "Hilpert Group",
-            location: "Poland",
-            lastLogin: "7/9/2020",
-            color: "Indigo"
-        },
-        {
-            id: 12,
-            name: "Sophi Biles",
-            job: "Recruiting Manager",
-            company: "Gutmann Inc",
-            location: "Indonesia",
-            lastLogin: "2/12/2021",
-            color: "Maroon"
-        },
-        {
-            id: 13,
-            name: "Florida Garces",
-            job: "Web Developer IV",
-            company: "Gaylord, Pacocha and Baumbach",
-            location: "Poland",
-            lastLogin: "5/31/2020",
-            color: "Purple"
-        },
-        {
-            id: 14,
-            name: "Maribeth Popping",
-            job: "Analyst Programmer",
-            company: "Deckow-Pouros",
-            location: "Portugal",
-            lastLogin: "4/27/2021",
-            color: "Aquamarine"
-        },
-        {
-            id: 15,
-            name: "Moritz Dryburgh",
-            job: "Dental Hygienist",
-            company: "Schiller, Cole and Hackett",
-            location: "Sri Lanka",
-            lastLogin: "8/8/2020",
-            color: "Crimson"
-        },
-        {
-            id: 16,
-            name: "Reid Semiras",
-            job: "Teacher",
-            company: "Sporer, Sipes and Rogahn",
-            location: "Poland",
-            lastLogin: "7/30/2020",
-            color: "Green"
-        },
-        {
-            id: 17,
-            name: "Alec Lethby",
-            job: "Teacher",
-            company: "Reichel, Glover and Hamill",
-            location: "China",
-            lastLogin: "2/28/2021",
-            color: "Khaki"
-        },
-        {
-            id: 18,
-            name: "Aland Wilber",
-            job: "Quality Control Specialist",
-            company: "Kshlerin, Rogahn and Swaniawski",
-            location: "Czech Republic",
-            lastLogin: "9/29/2020",
-            color: "Purple"
-        },
-        {
-            id: 19,
-            name: "Teddie Duerden",
-            job: "Staff Accountant III",
-            company: "Pouros, Ullrich and Windler",
-            location: "France",
-            lastLogin: "10/27/2020",
-            color: "Aquamarine"
-        },
-        {
-            id: 20,
-            name: "Lorelei Blackstone",
-            job: "Data Coordiator",
-            company: "Witting, Kutch and Greenfelder",
-            location: "Kazakhstan",
-            lastLogin: "6/3/2020",
-            color: "Red"
+            name: "Peonía",
+            significance: "Romance, prosperidad y buena fortuna",
+            bestPairedWith: "Rosas, hortensias, lirios",
+            nativeRegion: "Asia, Europa, América del Norte"
         }
-
     ];
 
     const sortedData = data.toSorted((a, b) => {
@@ -212,17 +101,15 @@ function SortedTable() {
     };
 
     const headers = [
-        { key: 'name', label: 'Name' },
-        { key: 'job', label: 'Job' },
-        { key: 'company', label: 'Company' },
-        { key: 'location', label: 'Location' },
-        { key: 'lastLogin', label: 'Last Login' },
-        { key: 'color', label: 'Favorite Color' }
+        { key: 'name', label: 'Nombre' },
+        { key: 'significance', label: 'Significado' },
+        { key: 'bestPairedWith', label: 'Recomendado emparejar con' },
+        { key: 'nativeRegion', label: 'Nativa de' }
     ];
 
     return (
         <div className="overflow-x-auto">
-            <table className="table table-xs">
+            <table className="table table-xl">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -239,11 +126,9 @@ function SortedTable() {
                         <tr key={item.id}>
                             <th>{index + 1}</th>
                             <td>{item.name}</td>
-                            <td>{item.job}</td>
-                            <td>{item.company}</td>
-                            <td>{item.location}</td>
-                            <td>{item.lastLogin}</td>
-                            <td>{item.color}</td>
+                            <td>{item.significance}</td>
+                            <td>{item.bestPairedWith}</td>
+                            <td>{item.nativeRegion}</td>
                         </tr>
                     ))}
                 </tbody>

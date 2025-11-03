@@ -1,36 +1,21 @@
-'use client'
-import { useEffect, useState } from "react";
-import Reloj from "./reloj";
-
+import MyDatePicker from "@/components/MyDatePicker";
 
 
 function Page2() {
-    const [hora, setHora] = useState(new Date());
-
-    useEffect(() => {
-        const i1 = setInterval(() => {
-            setHora(new Date());
-            document.title = new Date().toLocaleTimeString();
-        }, 1000);
-
-
-        return () => clearInterval(i1);
-    }, []);
+    const fecha = new Date()
+    console.log(fecha.toISOString());
 
     return (
-        <div>
-            <h2>Hora actual:</h2>
-            <p className="text-center text-9xl font-mono">{hora.toLocaleTimeString()}</p>
-        </div>
+        <>
+            <p>{fecha.toISOString()}</p>
+            <MyDatePicker />
+            <input type="date"
+                defaultValue="2024-07-22"
+                min="2025-01-01"
+                max="2025-12-31" />
+            <input type="datetime-local" />
+        </>
     );
-
-
-    // return (
-    //     <Reloj />
-    // );
-
 }
 
 export default Page2;
-
-

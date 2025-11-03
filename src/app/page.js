@@ -1,3 +1,6 @@
+'use client'
+import { useEffect, useState } from "react";
+import Reloj from "./reloj";
 import Link from "next/link";
 import AutoCarousel from "@/components/AutoCarousel";
 import CountDown from "@/components/CountDown";
@@ -7,19 +10,29 @@ import RadialProgress from "@/components/RadialProgress";
 
 
 export default function Home() {
+  const [hora, setHora] = useState(new Date());
+
+    useEffect(() => {
+        const i1 = setInterval(() => {
+            setHora(new Date());
+        }, 1000);
+
+
+        return () => clearInterval(i1);
+    }, []);
   return (
-    <section>
-
+    
+    <section>   
       <AutoCarousel />
-
-
+      
+        <div className="bg-rose-100 text-white">
+            <p className="text-center text-9xl font-mono">{hora.toLocaleTimeString()}</p>
+        </div>
+        
       <br />
       <div className="tooltip" data-tip="hello world">
         <p className="btn">Hover me</p>
       </div>
-
-      <CountDown />
-      <RadialProgress />
 
 
       {/* name of each tab group should be unique */}
@@ -83,11 +96,6 @@ export default function Home() {
 
         </div>
       </div>
-
-      <div className="p-10 bg-white"></div>
-
-      <SortedTable />
-      {/* <Table /> */}
 
     </section>
   );

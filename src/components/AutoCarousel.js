@@ -4,7 +4,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const images = ["/img1.jpg", "/img2.jpg", "/img3.jpg", "/img4.jpg"];
+const images = ["/img1.jpg", "/img2.jpg", "/img3.jpg", "/img4.jpg", "/img5.jpg"];
 
 export default function AutoCarousel() {
     const [index, setIndex] = useState(0);
@@ -18,7 +18,7 @@ export default function AutoCarousel() {
     }, []);
 
     return (
-        <div className="relative w-full h-64 overflow-hidden rounded-xl">
+        <div className="relative w-full h-64 overflow-hidden">
             {images.map((src, i) => (
                 <img
                     key={i}

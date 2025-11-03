@@ -1,21 +1,27 @@
-import MyDatePicker from "@/components/MyDatePicker";
+'use client'
+import { useEffect, useState } from "react";
+import Table from "@/components/Table";
+import SortedTable from "@/components/SortedTable";
+import { GiFlowerPot } from "react-icons/gi";
+
 
 
 function Page1() {
-    const fecha = new Date()
-    console.log(fecha.toISOString());
-
     return (
-        <>
-            <p>{fecha.toISOString()}</p>
-            <MyDatePicker />
-            <input type="date"
-                defaultValue="2024-07-22"
-                min="2025-01-01"
-                max="2025-12-31" />
-            <input type="datetime-local" />
-        </>
+        <section>
+            <div className="p-10 bg-white justify-items-center">
+                <div className="">
+                    <div className="tooltip" data-tip="Evita arrancar una flor del suelo, corta su tallo para protegerla de infecciones...">
+                        <p className="btn"><GiFlowerPot /> Recordatorio</p>
+                    </div>
+                </div>
+
+                <SortedTable />
+            </div>
+        </section>
     );
 }
 
 export default Page1;
+
+
