@@ -5,6 +5,8 @@ import Link from "next/link";
 import AutoCarousel from "@/components/AutoCarousel";
 import MyDatePicker from "@/components/MyDatePicker";
 import List from "@/components/List";
+import Rating from "@/components/Rating";
+import Stats from "@/components/Stats";
 import CountDown from "@/components/CountDown";
 import Table from "@/components/Table";
 import SortedTable from "@/components/SortedTable";
@@ -37,7 +39,7 @@ export default function Home() {
 
       {/* name of each tab group should be unique */}
       <div className="tabs tabs-box">
-        <input type="radio" name="my_tabs" className="tab" aria-label="Calendario" />
+        <input type="radio" name="my_tabs" className="tab" aria-label="Calendario" defaultChecked/>
         <div className="tab-content bg-base-100 border-base-300 p-6 justify-items-center">
           <p>{fecha.toISOString()}</p>
                       <MyDatePicker />
@@ -53,17 +55,13 @@ export default function Home() {
           <List />
         </div>
 
-        <input type="radio" name="my_tabs" className="tab" aria-label="Valoración de nuestros clientes" defaultChecked />
-        <div className="tab-content bg-base-100 border-base-300 p-6 justify-items-center">
-          <div className="rating gap-1">
-            <div name="rating-3" className="mask mask-heart bg-yellow-200" aria-label="1 star"></div>
-            <div name="rating-3" className="mask mask-heart bg-yellow-200" aria-label="2 star"></div>
-            <div name="rating-3" className="mask mask-heart bg-yellow-200" aria-label="3 star"></div>
-            <div name="rating-3" className="mask mask-heart bg-yellow-200" aria-label="4 star" aria-current="true"></div>
-            <div name="rating-3" className="mask mask-heart bg-yellow-200" aria-label="5 star"></div>
-          </div>
+        <input type="radio" name="my_tabs" className="tab" aria-label="Valoración de nuestros clientes" />
+            <Rating />
 
-        </div>
+        <input type="radio" name="my_tabs" className="tab" aria-label="Estadísticas de la página" />
+          <div className="tab-content bg-base-100 border-base-300 p-6 justify-items-center">
+            <Stats />
+          </div>
       </div>
 
     </section>
